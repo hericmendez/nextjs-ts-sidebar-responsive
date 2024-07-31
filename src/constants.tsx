@@ -10,7 +10,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: 'Projects',
     path: '/projects',
-    icon: <Icon icon='lucide:folder' width='24' height='24' />,
+    icon: <Icon icon='lucide:layout-list' width='24' height='24' />,
     submenu: true,
     subMenuItems: [
       {
@@ -28,13 +28,33 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     ],
   },
   {
+    title: 'To do',
+    path: '/to-do',
+    icon: <Icon icon='lucide:list-todo' width='24' height='24' />,
+    submenu: true,
+    subMenuItems: [
+      {
+        title: 'All',
+        path: '/to-do',
+      },
+      {
+        title: 'Tutorials',
+        path: '/to-do/tutorials',
+      },
+      {
+        title: 'Ideas',
+        path: '/to-do/ideas',
+      },
+    ],
+  },
+  {
     title: 'Resources',
     path: '/resources',
     icon: <Icon icon='lucide:bookmark' width='24' height='24' />,
   },
   {
-    title: 'Settings',
-    path: '/settings',
-    icon: <Icon icon='lucide:settings' width='24' height='24' />,
+    title: 'Work in progress',
+    path: '/work-in-progress',
+    icon: <Icon icon='lucide:construction' width='24' height='24' />,
   },
 ];
