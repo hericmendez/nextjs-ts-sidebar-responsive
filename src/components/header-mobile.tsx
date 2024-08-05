@@ -22,7 +22,7 @@ const useDimensions = (ref: any) => {
   return dimensions.current;
 };
 
-// sidebar
+// SIDEBAR
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
@@ -66,7 +66,7 @@ const MenuItem = ({
   );
 };
 
-// motion when opens and closes
+// motion when menu opens and closes
 const MenuItemVariants = {
   open: {
     y: 0,
@@ -94,14 +94,17 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
 
   return (
     <>
+      {/* NAV LINKS with SUB LINKS */}
       <MenuItem>
         <button
-          className='flex w-full text-2xl'
+          className='flex w-full text-xl font-semibold hover:text-primary-500'
           onClick={() => setSubMenuOpen(!subMenuOpen)}
         >
-          <div className='flex flex-row justify-between w-full items-center'>
+          <div className='flex flex-row justify-between w-full items-center  gap-4'>
             <span
-              className={`${pathname.includes(item.path) ? 'font-bold' : ''}`}
+              className={`${
+                pathname.includes(item.path) ? 'text-primary-500' : ''
+              }`}
             >
               {item.title}
             </span>
@@ -111,6 +114,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
           </div>
         </button>
       </MenuItem>
+      {/* SUB LINKS */}
       <div className='mt-2 ml-2 flex flex-col space-y-2'>
         {subMenuOpen && (
           <>
@@ -119,8 +123,8 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                 <MenuItem key={subIndex}>
                   <Link
                     href={subItem.path}
-                    className={`${
-                      subItem.path === pathname ? 'font-bold' : ''
+                    className={`font-semibold hover:text-primary-500 ${
+                      subItem.path === pathname ? 'text-primary-500' : ''
                     }`}
                     onClick={() => toggleOpen()}
                   >
@@ -175,14 +179,16 @@ export default function HeaderMobile() {
           return (
             <div key={i}>
               {item.submenu ? (
+                // NAV LINKS with SUBMENUS
                 <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
               ) : (
+                // NAV LINKS - STANDALONE
                 <MenuItem>
                   <Link
                     href={item.path}
                     onClick={() => toggleOpen()}
-                    className={`flex w-full text-2xl ${
-                      item.path === pathname ? 'font-bold' : ''
+                    className={`flex w-full text-xl font-semibold hover:text-primary-500 ${
+                      item.path === pathname ? 'text-primary-500' : ''
                     }`}
                   >
                     {item.title}

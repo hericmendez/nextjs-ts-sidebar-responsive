@@ -45,8 +45,8 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
           {/* NAV LINKS with SUB LINKS */}
           <button
             onClick={toggleSubMenu}
-            className={`flex flex-row items-center p-2 rounded-lg hover:bg-primary-300 w-full justify-between ${
-              pathname.includes(item.path) ? 'bg-primary-300' : ''
+            className={`flex flex-row items-center p-2 rounded-lg hover:bg-primary-200 w-full justify-between ${
+              pathname.includes(item.path) ? 'bg-primary-200' : ''
             }`}
           >
             <div className='flex space-x-4 items-center'>
@@ -67,9 +67,9 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
                   <Link
                     key={subIndex}
                     href={subItem.path}
-                    className={` hover:bg-primary-200 p-2 rounded-lg ${
+                    className={` hover:text-primary-400 font-semibold p-2 rounded-lg ${
                       subItem.path === pathname
-                        ? 'bg-primary-200 p-2 rounded-lg font-semibold'
+                        ? 'text-primary-400 font-semibold p-2'
                         : 'p-2'
                     }`}
                   >
@@ -84,8 +84,8 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
         // NAV LINKS - STANDALONE
         <Link
           href={item.path}
-          className={`flex space-x-4 items-center p-2 rounded-lg hover:bg-primary-300 ${
-            item.path === pathname ? 'bg-primary-300' : ''
+          className={`flex space-x-4 items-center p-2 rounded-lg hover:bg-primary-200 ${
+            item.path === pathname ? 'bg-primary-200' : ''
           }`}
         >
           {item.icon}
