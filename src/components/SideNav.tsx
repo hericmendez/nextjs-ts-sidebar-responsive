@@ -9,19 +9,19 @@ import { Icon } from '@iconify/react';
 
 export default function SideNav() {
   return (
-    <div className='hidden fixed md:flex md:w-[16rem] bg-white h-screen flex-1  border-r border-zinc-200'>
-      <div className='flex flex-col space-y-6 w-full'>
+    <div className="transition-colors duration-1000 hidden fixed md:flex md:w-[16rem] bg-pastel-blue dark:bg-slate-gray h-screen flex-1  border-r border-zinc-200 dark:border-slate-gray text-black dark:text-zinc-100">
+      <div className="flex flex-col space-y-6 w-full">
         {/* LOGO */}
         <Link
-          href='/'
-          className='flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-100 h-12 w-full'
+          href="/"
+          className="flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-100 h-12 w-full"
         >
-          <span className='w-7 h-7 bg-zinc-300 rounded-lg' />
-          <span className='hidden md:flex font-bold text-xl '>Logo</span>
+          <span className="w-7 h-7 bg-zinc-300 rounded-lg" />
+          <span className="hidden md:flex font-bold text-xl ">Logo</span>
         </Link>
 
         {/* NAV LINKS */}
-        <div className='flex flex-col space-y-2 md:px-6'>
+        <div className="flex flex-col space-y-2 md:px-6">
           {SIDENAV_ITEMS.map((item, index) => {
             return <MenuItem key={index} item={item} />;
           })}

@@ -1,30 +1,81 @@
 @import 'tailwindcss';
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+html {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@theme{
+/*Layout Colors (dark mode):*/
+  /*  Background color for the entire page */
+  --color-ebony-black: #161616;
 
-@theme {
-  --height-screen: 100dvh;
+  /*  Header background */
+  --color-anthracite-gray: #222;
 
-  --width-screen: 100dvw;
+  /* Sidebar background */
+  --color-slate-gray: #3f4044;
 
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
-  --color-primary-950: #1e1b4b;
+  /* Pastel Blue for #acc1d6 */
+  --color-pastel-blue: #acc1d6;
+
+  /* Pastel Blue for #acc1d6 */
+  --color-pastel-blue: #acc1d6;
+
+/*Button/Alert Colors (Dark mode)*/
+    /* Forest Green for Success  */
+  --color-forest-green: #265b20;
+
+  /* Navy Blue for Primary */
+  --color-navy-blue: #00314f;
+
+  /* Samus Orange for Warning */
+  --color-samus-orange: ##FF7F00
+;
+
+  /* Burgundy for Danger */
+  --color-burgundy: #70181c;
+
+  /* Charcoal Gray for Disabled */
+  --color-charcoal-gray: #262728;
+/* ------------------------------------------------- */
+
+/*Layout Colors (dark mode):*/
+ /* Pearl White for background */
+ --color-pearl-white: #f8f9fa;
+
+ /* Mist Gray for header background */
+ --color-mist-gray: #dde3e7;
+
+ /* Cloud Gray for sidebar background */
+ --color-cloud-gray: #cfd8dc;
+
+ /* Pure White for main content */
+ --color-pure-white: #ffffff;
+
+ /* Onyx Black for text */
+ --color-onyx-black: #1c1c1e;
+
+ /* Silver Mist for borders/dividers */
+ --color-silver-mist: #b0bec5;
+
+
+/* Button/Alert Colors (Light Mode) */
+
+ /* Emerald Green for Success */
+ --color-emerald-green: #4caf50;
+
+ /* Royal Blue for Primary */
+ --color-royal-blue: #1565c0;
+
+ /* Sunset Orange for Warning */
+ --color-sunset-orange: #ff9800;
+
+ /* Crimson Red for Danger */
+ --color-crimson-red: #c62828;
+
+ /* Ash Gray for Disabled */
+ --color-ash-gray: #bdbdbd;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
