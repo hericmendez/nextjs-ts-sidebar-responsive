@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from '../components/Header';
-import HeaderMobile from '../components/Header-mobile';
+import HeaderMobile from "../components/header-mobile";
 import SideNav from '../components/SideNav';
 import PageWrapper from '../components/PageWrapper';
 import MarginWidthWrapper from '../components/Margin-width-wrapper';
