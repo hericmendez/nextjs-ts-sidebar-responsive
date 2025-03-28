@@ -3,13 +3,25 @@
 import React from 'react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import useScroll from '../hooks/use-scroll';
-import { cn } from '../lib/utils';
+import useScroll from "@/hooks/useScroll";
+import { cn } from "../lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import LogoutButton from "./LogoutButton";
 
 export default function Header() {
   const scrolled = useScroll(5);
   const selectedLayout = useSelectedLayoutSegment();
+
+  const handleLogout = () => {
+    // Remover o cookie do token
+    document.cookie = "session=; path=/; max-age=0";
+
+    // Opcional: Redirecionar para a página de login
+    window.location.href = "/login";
+    document.cookie;
+    console.log("document.cookie ==> ", document.cookie);
+  };
+
   return (
     <nav
       className={cn(
@@ -42,6 +54,11 @@ export default function Header() {
           <div className="hidden md:block">
             <div className="h-8 w-8 rounded-full bg-slate-300 flex items-center justify-center text-lg ">
               <span className="font-semibold text-sm ">AM</span>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="flex items-center justify-center text-lg ">
+              <LogoutButton />
             </div>
           </div>
         </div>

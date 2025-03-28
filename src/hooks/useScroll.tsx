@@ -1,7 +1,3 @@
-// -> takes in a number used as a threshold, returns a boolean value of 'scrolled'.
-// checks to see how far down the user has scrolled
-// if scrolled true, used for styling purposes
-
 import { useCallback, useEffect, useState } from 'react';
 
 export default function useScroll(threshold: number) {

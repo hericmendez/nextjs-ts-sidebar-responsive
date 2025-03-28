@@ -12,15 +12,21 @@
     "@iconify/react": "^5.0.2",
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.21",
+    "axios": "^1.8.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.19",
+    "jose": "^6.0.10",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.417.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
